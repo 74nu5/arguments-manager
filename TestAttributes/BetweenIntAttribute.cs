@@ -31,7 +31,7 @@
         public bool Test<T>(T value)
         {
             var i = Convert.ToInt32(value);
-            return (i > this.borneInférieur) && (i < this.borneSupérieur);
+            return i > this.borneInférieur && i < this.borneSupérieur;
         }
 
         #endregion

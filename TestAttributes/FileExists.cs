@@ -14,10 +14,29 @@
     {
         #region Méthodes publiques
 
-        public bool Test<T>(T value)
+        /// <inheritdoc />
+        public bool Test<T>([NotNull] T value)
         {
-            var fileInfo = value as FileInfo ?? new FileInfo(value.ToString());
-            return fileInfo.Exists;
+            if (value == null)
+            {
+                throw new ArgumentNullException(nameof(value));
+            }
+
+
+            switch (value)
+            {
+                case FileInfo fi:
+                    return fi.Exists;
+                case string filePath:
+                    if (!File.Exists(filePath))
+                    {
+                        throw new FileNotFoundException("Le fichier spécifié est introuvable");
+                    }
+
+                    return new FileInfo(filePath).Exists;
+                default:
+                    return false;
+            }
         }
 
         #endregion

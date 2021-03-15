@@ -1,8 +1,0 @@
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\obj\Debug\netstandard2.0\arguments-manager.csproj.CoreCompileInputs.cache
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\obj\Debug\netstandard2.0\arguments-manager.AssemblyInfoInputs.cache
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\obj\Debug\netstandard2.0\arguments-manager.AssemblyInfo.cs
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\bin\Debug\netstandard2.0\arguments-manager.deps.json
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\bin\Debug\netstandard2.0\arguments-manager.dll
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\bin\Debug\netstandard2.0\arguments-manager.pdb
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\obj\Debug\netstandard2.0\arguments-manager.dll
-C:\Users\ravonde\Documents\Projets\C#\Repos Git\arguments-manager\obj\Debug\netstandard2.0\arguments-manager.pdb

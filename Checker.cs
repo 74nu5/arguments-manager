@@ -4,12 +4,14 @@
 
     using System;
 
-    using JetBrains.Annotations;
     using Arguments.Manager.Exceptions;
+
+    using JetBrains.Annotations;
 
     #endregion
 
     /// <summary>The checker.</summary>
+    [PublicAPI]
     public sealed class Checker
     {
         #region Champs
@@ -21,12 +23,10 @@
 
         #region Constructeurs et destructeurs
 
-        /// <summary>Initializes a new instance of the <see cref="Checker"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="Checker" /> class.</summary>
         /// <param name="paramName">The param name.</param>
         public Checker(string paramName)
-        {
-            this.paramName = paramName;
-        }
+            => this.paramName = paramName;
 
         #endregion
 
@@ -37,7 +37,8 @@
         /// <param name="count">The count.</param>
         /// <typeparam name="T"></typeparam>
         /// <exception cref="ArgumentException"></exception>
-        public void LessThan<T>(T i, T count) where T : struct, IComparable
+        public void LessThan<T>(T i, T count)
+            where T : struct, IComparable
         {
             if (i.CompareTo(count) == 1)
             {
@@ -49,7 +50,8 @@
         /// <param name="o">The o.</param>
         /// <typeparam name="T"></typeparam>
         /// <exception cref="ArgumentNullException"></exception>
-        public void NotNull<T>([CanBeNull] T o) where T : class
+        public void NotNull<T>([CanBeNull] T o)
+            where T : class
         {
             if (o == null)
             {

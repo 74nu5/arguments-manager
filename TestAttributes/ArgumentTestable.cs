@@ -6,12 +6,15 @@
     using System.Linq;
     using System.Reflection;
 
+    using JetBrains.Annotations;
+
     #endregion
 
     public abstract class ArgumentTestable
     {
         #region Méthodes publiques
 
+        [PublicAPI]
         public Dictionary<PropertyInfo, bool> CheckArguments()
         {
             var result = new Dictionary<PropertyInfo, bool>();
@@ -24,7 +27,7 @@
                     continue;
                 }
 
-                foreach (var testAttribute in attributes.Where(o => !(o is ArgumentAttribute) && o is ITestAttribute).Cast<ITestAttribute>())
+                foreach (var testAttribute in attributes.Where(attribute => !(attribute is ArgumentAttribute) && attribute is ITestAttribute).Cast<ITestAttribute>())
                 {
                     result.Add(propertyInfo, testAttribute.Test(propertyInfo.GetValue(this, null)));
                 }

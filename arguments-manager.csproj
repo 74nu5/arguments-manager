@@ -1,6 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>Arguments Manager</Title>
+    <Authors>Tanus</Authors>
+    <Description>Librairie de gestion des paramètres d'un programme.</Description>
   </PropertyGroup>
   <ItemGroup>
   </ItemGroup>
